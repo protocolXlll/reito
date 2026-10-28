@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Reito — Currency Converter</title>
+<meta name="description" content="Reito converts between 160 world currencies and 22 cryptocurrencies in one list. Exact amounts, works offline, no ads, no tracking.">
+<meta name="theme-color" content="#f6f3ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon.svg">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Reito home">
+      <img src="assets/icon.svg" alt="" width="32" height="32">
+      Reito
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="#support">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero" aria-labelledby="hero-heading">
+    <div>
+      <p class="eyebrow">Currency &amp; crypto converter for iPhone</p>
+      <h1 id="hero-heading">Every currency.<br><span>One list.</span></h1>
+      <p class="lead">Type an amount once and see it in every currency you care about — 160 world currencies and 22 cryptocurrencies, exact, not rounded.</p>
+      <span class="store-badge" role="note">
+        <span>
+          <small>Coming soon</small>
+          on the App Store
+        </span>
+      </span>
+      <ul class="trust" aria-label="Privacy at a glance">
+        <li>No ads</li>
+        <li>No account</li>
+        <li>No tracking</li>
+        <li>Works offline</li>
+      </ul>
+    </div>
+    <div class="phones">
+      <img class="phone phone--back" src="assets/02-keypad.jpg" width="589" height="1280" alt="Reito with the keypad open, editing the Vietnamese dong row" loading="eager">
+      <img class="phone phone--front" src="assets/01-list.jpg" width="589" height="1280" alt="Reito's currency list: US dollar, euro, dong, baht, hryvnia, lari, bitcoin and ether, all converted from 100 dollars" loading="eager" fetchpriority="high">
+    </div>
+  </section>
+
+  <section class="wrap section precision" aria-labelledby="precision-heading">
+    <div>
+      <h2 id="precision-heading">Exact, not rounded.</h2>
+      <p class="intro">Each row is written to the precision its own amount needs. Whole dollars stay whole, and a small bitcoin amount never collapses to zero or loses a meaningful digit.</p>
+    </div>
+    <div>
+      <ul class="ledger" aria-label="Example: 1234 US dollars converted">
+        <li class="is-base"><span><span class="code">USD</span><span class="name">US Dollar</span></span><span class="amount">1&#8239;234</span></li>
+        <li><span><span class="code">EUR</span><span class="name">Euro</span></span><span class="amount">1&#8239;060.72</span></li>
+        <li><span><span class="code">JPY</span><span class="name">Yen</span></span><span class="amount">189&#8239;535</span></li>
+        <li><span><span class="code">BTC</span><span class="name">Bitcoin</span></span><span class="amount">0.01582</span></li>
+        <li><span><span class="code">ETH</span><span class="name">Ethereum</span></span><span class="amount">0.5003</span></li>
+      </ul>
+      <p class="ledger-note">Illustrative rates.</p>
+    </div>
+  </section>
+
+  <section class="wrap section" id="features" aria-labelledby="features-heading">
+    <h2 id="features-heading">Small app, carefully made.</h2>
+    <p class="intro">Everything you need to convert money on the go, and nothing you don't.</p>
+    <ul class="features">
+      <li>
+        <h3>Fiat and crypto, side by side</h3>
+        <p>Mix dollars, yen and bitcoin in one list and drag rows into any order. Tap any amount to make it the base.</p>
+      </li>
+      <li>
+        <h3>Find a currency by country</h3>
+        <p>Search by code, by name, or by country — type “Japan” and find the yen.</p>
+      </li>
+      <li>
+        <h3>Keeps working offline</h3>
+        <p>Rates refresh once a day and are saved on your device, so the converter still works on a plane. Pull down to refresh any time.</p>
+      </li>
+      <li>
+        <h3>Private by design</h3>
+        <p>No account, no analytics, no ads. Your currencies and settings never leave your phone.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="wrap section" aria-labelledby="gallery-heading">
+    <h2 id="gallery-heading">A closer look.</h2>
+    <div class="gallery" role="list">
+      <figure role="listitem">
+        <img src="assets/01-list.jpg" width="589" height="1280" alt="Currency list converted from 100 US dollars" loading="lazy">
+        <figcaption>Every amount at once</figcaption>
+      </figure>
+      <figure role="listitem">
+        <img src="assets/02-keypad.jpg" width="589" height="1280" alt="Keypad open over the list" loading="lazy">
+        <figcaption>Type into any row</figcaption>
+      </figure>
+      <figure role="listitem">
+        <img src="assets/03-search-country.jpg" width="589" height="1280" alt="Searching currencies by country name" loading="lazy">
+        <figcaption>Search by country</figcaption>
+      </figure>
+      <figure role="listitem">
+        <img src="assets/05-reorder.jpg" width="589" height="1280" alt="Reordering currencies by dragging" loading="lazy">
+        <figcaption>Your order, your list</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap section support" id="support" aria-labelledby="support-heading">
+    <aside class="contact-card" aria-labelledby="support-heading">
+      <h2 id="support-heading">Support</h2>
+      <p>Found a bug, missing a currency, or have an idea? Write to me — every message is read.</p>
+      <a class="mail" href="mailto:reito.support@gmail.com">reito.support@gmail.com</a>
+    </aside>
+    <div class="faq">
+      <details>
+        <summary>Where do the rates come from?</summary>
+        <p>Fiat rates come from <a href="https://www.exchangerate-api.com">ExchangeRate-API</a>. Cryptocurrency rates are <a href="https://www.coingecko.com/en/api">Powered by CoinGecko</a>. Rates are for information only and shouldn’t be used for financial decisions.</p>
+      </details>
+      <details>
+        <summary>How often do rates update?</summary>
+        <p>Automatically once a day when you open the app. Pull down on the list, or tap “Rates Updated” in Settings, to refresh right away.</p>
+      </details>
+      <details>
+        <summary>Does it work without internet?</summary>
+        <p>Yes. The last downloaded rates are saved on your device and used until the next successful refresh.</p>
+      </details>
+      <details>
+        <summary>Why do some amounts have more decimals than others?</summary>
+        <p>Reito shows each amount with as many digits as it needs to stay accurate, so a tiny crypto amount isn’t rounded down to zero while dollars stay as dollars.</p>
+      </details>
+      <details>
+        <summary>How do I add or remove a currency?</summary>
+        <p>Tap + on the main screen and choose Currencies or Tokens. To reorder or remove, tap ··· and choose Reorder.</p>
+      </details>
+      <details>
+        <summary>What do tips unlock?</summary>
+        <p>Nothing — every feature is free. Tips in the About screen are an optional way to support development. They’re processed by Apple, and there’s nothing to restore.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Reito</span>
+    <span><a href="privacy.html">Privacy Policy</a> · <a href="#support">Support</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
