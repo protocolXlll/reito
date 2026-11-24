@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Reito — Currency Converter</title>
-<meta name="description" content="Reito converts between 160 world currencies and 22 cryptocurrencies in one list. Exact amounts, works offline, no ads, no tracking.">
+<meta name="description" content="Reito converts between 160 world currencies and 22 cryptocurrencies in one list, each amount exact to the digit it needs. Works offline, no ads, no tracking.">
 <meta name="theme-color" content="#f6f3ee" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
@@ -33,7 +33,7 @@
   <section class="wrap hero" aria-labelledby="hero-heading">
     <div>
       <p class="eyebrow">Currency &amp; crypto converter for iPhone</p>
-      <h1 id="hero-heading">Every currency.<br><span>One list.</span></h1>
+      <h1 id="hero-heading">Fiat and crypto,<br><span>exact to the digit.</span></h1>
       <p class="lead">Type an amount once and see it in every currency you care about — 160 world currencies and 22 cryptocurrencies, exact, not rounded.</p>
       <span class="store-badge" role="note">
         <span>
@@ -50,7 +50,7 @@
     </div>
     <div class="phones">
       <img class="phone phone--back" src="assets/02-keypad.jpg" width="589" height="1280" alt="Reito with the keypad open, editing the Vietnamese dong row" loading="eager">
-      <img class="phone phone--front" src="assets/01-list.jpg" width="589" height="1280" alt="Reito's currency list: US dollar, euro, dong, baht, hryvnia, lari, bitcoin and ether, all converted from 100 dollars" loading="eager" fetchpriority="high">
+      <img class="phone phone--front" src="assets/01-list.jpg" width="589" height="1280" alt="Reito's currency list: US dollar, euro, dong, baht, hryvnia, lari, bitcoin, ether and PAX gold, all converted from 100 dollars" loading="eager" fetchpriority="high">
     </div>
   </section>
 
@@ -60,13 +60,18 @@
       <p class="intro">Each row is written to the precision its own amount needs. Whole dollars stay whole, and a small bitcoin amount never collapses to zero or loses a meaningful digit.</p>
     </div>
     <div>
-      <ul class="ledger" aria-label="Example: 1234 US dollars converted">
-        <li class="is-base"><span><span class="code">USD</span><span class="name">US Dollar</span></span><span class="amount">1&#8239;234</span></li>
-        <li><span><span class="code">EUR</span><span class="name">Euro</span></span><span class="amount">1&#8239;060.72</span></li>
-        <li><span><span class="code">JPY</span><span class="name">Yen</span></span><span class="amount">189&#8239;535</span></li>
-        <li><span><span class="code">BTC</span><span class="name">Bitcoin</span></span><span class="amount">0.01582</span></li>
-        <li><span><span class="code">ETH</span><span class="name">Ethereum</span></span><span class="amount">0.5003</span></li>
-      </ul>
+      <div class="ticket ledger" role="group" aria-label="Example: 1234 US dollars converted">
+        <p class="ticket-part ticket-title" aria-hidden="true">Currencies</p>
+        <ul class="ticket-part">
+          <li class="is-base"><span><span class="code">USD</span><span class="name">US Dollar</span></span><span class="amount">1&#8239;234</span></li>
+          <li><span><span class="code">EUR</span><span class="name">Euro</span></span><span class="amount">1&#8239;060.72</span></li>
+          <li><span><span class="code">JPY</span><span class="name">Yen</span></span><span class="amount">189&#8239;535</span></li>
+        </ul>
+        <ul class="ticket-part">
+          <li><span><span class="code">BTC</span><span class="name">Bitcoin</span></span><span class="amount">0.01582</span></li>
+          <li><span><span class="code">ETH</span><span class="name">Ethereum</span></span><span class="amount">0.5003</span></li>
+        </ul>
+      </div>
       <p class="ledger-note">Illustrative rates.</p>
     </div>
   </section>
@@ -117,10 +122,15 @@
   </section>
 
   <section class="wrap section support" id="support" aria-labelledby="support-heading">
-    <aside class="contact-card" aria-labelledby="support-heading">
-      <h2 id="support-heading">Support</h2>
-      <p>Found a bug, missing a currency, or have an idea? Write to me — every message is read.</p>
-      <a class="mail" href="mailto:reito.support@gmail.com">reito.support@gmail.com</a>
+    <aside class="ticket contact-ticket" aria-labelledby="support-heading">
+      <div class="ticket-part ticket-banner">
+        <img src="assets/banner.jpg" width="1200" height="514" alt="" loading="lazy">
+      </div>
+      <div class="ticket-part">
+        <h2 id="support-heading">Support</h2>
+        <p>Found a bug, missing a currency, or have an idea? Write to me — every message is read.</p>
+        <a class="mail" href="mailto:reito.support@gmail.com">reito.support@gmail.com</a>
+      </div>
     </aside>
     <div class="faq">
       <details>
