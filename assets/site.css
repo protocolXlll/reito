@@ -1,16 +1,19 @@
 :root {
-  --color-bg: #f6f3ee;
+  /* The app's own palette: iOS grouped greys and its accent orange (#FF9500), no warm tint —
+     the earlier cream page and brown-orange ink read as chocolate. */
+  --color-bg: #f2f2f7;
   --color-surface: #ffffff;
-  --color-surface-sunk: #efeae2;
+  --color-surface-sunk: #e9e9ee;
   --color-text: #1c1c1e;
-  --color-muted: #6e6a66;
-  --color-line: rgba(28, 28, 30, 0.1);
-  --color-accent: #ef7a22;
-  --color-accent-ink: #b4520c;
-  --color-accent-soft: rgba(239, 122, 34, 0.12);
+  --color-muted: #6e6e73;
+  --color-line: rgba(60, 60, 67, 0.14);
+  --color-accent: #ff9500;
+  /* The accent darkened only as far as small text on white needs. */
+  --color-accent-ink: #c86400;
+  --color-accent-soft: rgba(255, 149, 0, 0.14);
   --color-ticket: #ffffff;
   --color-perforation: rgba(28, 28, 30, 0.16);
-  --gradient-brand: linear-gradient(160deg, #e99034 0%, #ed6c2d 100%);
+  --gradient-brand: linear-gradient(160deg, #ffa21a 0%, #ff7a00 100%);
 
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
   --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
@@ -26,8 +29,8 @@
   --radius-ticket: 30px;
   --ticket-notch: 12px;
   --radius-phone: 40px;
-  --shadow-card: 0 1px 2px rgba(60, 40, 20, 0.06), 0 12px 32px -12px rgba(60, 40, 20, 0.18);
-  --shadow-phone: 0 2px 6px rgba(60, 40, 20, 0.08), 0 40px 80px -30px rgba(120, 60, 10, 0.45);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.05), 0 12px 32px -12px rgba(0, 0, 0, 0.16);
+  --shadow-phone: 0 2px 6px rgba(0, 0, 0, 0.06), 0 40px 80px -30px rgba(0, 0, 0, 0.35);
 
   --duration-fast: 150ms;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -36,15 +39,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #121110;
-    --color-surface: #1e1c1b;
-    --color-surface-sunk: #191817;
-    --color-text: #f4f1ec;
-    --color-muted: #a09a93;
-    --color-line: rgba(255, 255, 255, 0.1);
-    --color-accent: #ff9a4a;
-    --color-accent-ink: #ffb27a;
-    --color-accent-soft: rgba(255, 154, 74, 0.14);
+    --color-bg: #000000;
+    --color-surface: #1c1c1e;
+    --color-surface-sunk: #2c2c2e;
+    --color-text: #f5f5f7;
+    --color-muted: #98989d;
+    --color-line: rgba(84, 84, 88, 0.5);
+    --color-accent: #ff9f0a;
+    --color-accent-ink: #ffb340;
+    --color-accent-soft: rgba(255, 159, 10, 0.16);
     /* A lifted grey, as in the app: a near-black ticket vanished against the dark page. */
     --color-ticket: #3d3d3d;
     --color-perforation: rgba(255, 255, 255, 0.18);
@@ -68,12 +71,15 @@ body {
 
 img { display: block; max-width: 100%; height: auto; }
 
+/* Links keep the text colour, marked by an orange underline: an orange light enough not to
+   look brown is too light for body-size text on white. */
 a {
-  color: var(--color-accent-ink);
-  text-decoration-thickness: 1px;
+  color: inherit;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
 }
-a:hover { text-decoration-thickness: 2px; }
+a:hover { text-decoration-thickness: 2.5px; }
 a:focus-visible, summary:focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 3px;
@@ -219,7 +225,7 @@ a.store-badge:active { transform: translateY(0) scale(0.98); }
    (a mask), so the page shows through; the shadow sits on the whole ticket so it follows them. */
 
 .ticket {
-  filter: drop-shadow(0 1px 1px rgba(60, 40, 20, 0.06)) drop-shadow(0 10px 18px rgba(60, 40, 20, 0.14));
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.05)) drop-shadow(0 10px 18px rgba(0, 0, 0, 0.10));
 }
 @media (prefers-color-scheme: dark) {
   .ticket { filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.5)); }
